@@ -1,0 +1,3 @@
+<% if @kitten.errors[field_name].any? %>
+  <span class="form-error"><%= @kitten.errors.full_messages_for(field_name).first %></span>
+<% end %>

@@ -1,0 +1,18 @@
+<section>
+  <h1 class="font-bold text-4xl">All Kittens</h1>
+  <div class="pt-8">
+    <% if @kittens.empty? %>
+      <div class="rounded-md py-6 text-center font-bold bg-orange-200 text-2xl text-orange-500" >
+        We have no kittens 😿
+      </div>
+    <% else %>
+      <ul class="space-y-4">
+        <% @kittens.each do |kitten| %>
+          <li>
+            <%= link_to kitten.name, kitten %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+</section>

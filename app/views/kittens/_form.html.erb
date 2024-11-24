@@ -1,0 +1,31 @@
+  <%= form_with model: @kitten do |f| %>
+  <div class="space-y-4">
+    <div class="flex gap-x-3">
+      <div class="flex-1">
+        <%= f.label :name, class: "block text-sm/6 font-medium text-gray-900" %>
+        <%= f.text_field :name, placeholder: "Simba", autofocus: true ,class: "form-control" %>
+        <%= render "field_error", field_name: :name %>
+      </div>
+      <div class="flex-1">
+        <%= f.label :age, class: "block text-sm/6 font-medium text-gray-900" %>
+        <%= f.number_field :age, min: 1, step: 1, value: 1 , class: "form-control" %>
+        <%= render "field_error", field_name: :age %>
+      </div>
+    </div>
+    <div class="flex gap-x-3">
+      <div class="flex-1">
+        <%= f.label :cuteness, class: "block text-sm/6 font-medium text-gray-900" %>
+        <%= f.number_field :cuteness, min: 1, max: 5, step: 1, value: 5 , class: "form-control" %>
+        <%= render "field_error", field_name: :cuteness %>
+      </div>
+      <div class="flex-1">
+        <%= f.label :softness, class: "block text-sm/6 font-medium text-gray-900" %>
+        <%= f.number_field :softness, min: 1, max: 5, step: 1, value: 5 , class: "form-control" %>
+        <%= render "field_error", field_name: :softness %>
+      </div>
+    </div>
+  </div>
+  <div class="mt-8">
+    <%= f.submit class: "btn-primary"  %>
+  </div>
+<% end %>
