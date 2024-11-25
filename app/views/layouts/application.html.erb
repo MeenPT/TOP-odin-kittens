@@ -19,7 +19,8 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <main class="container mx-auto py-12">
+    <%= render "shared/header" %>
+    <main class="page-container py-16">
       <%= yield %>
     </main>
   </body>
