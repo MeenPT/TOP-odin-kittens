@@ -1,4 +1,8 @@
 <div>
-  <h1 class="font-bold text-4xl">Kittens#show</h1>
-  <p>Find me in app/views/kittens/show.html.erb</p>
+  <h1 class="font-bold text-4xl"><%= @kitten.name %></h1>
+  <div class="mt-8 space-y-2">
+    <h2>Age: <%= pluralize(@kitten.age, "year") %> old</h2>
+    <h2>Cuteness: <%= "#{@kitten.cuteness}/5" %></h2>
+    <h2>Softness: <%= "#{@kitten.softness}/5" %></h2>
+  </div>
 </div>
