@@ -8,8 +8,9 @@
     <% else %>
       <ul class="space-y-4">
         <% @kittens.each do |kitten| %>
-          <li>
-            <%= link_to kitten.name, kitten %>
+          <li class="flex justify-between items-center">
+            <%= link_to kitten.name, kitten, class: "text-2xl font-semibold" %>
+            <%= button_to "Delete", kitten, method: :delete, class: "btn-danger" %>
           </li>
         <% end %>
       </ul>

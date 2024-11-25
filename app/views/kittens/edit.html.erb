@@ -3,4 +3,7 @@
   <div class="border p-8 rounded-lg bg-white/70 mt-10">
     <%= render "form" %>
   </div>
+  <div class="pt-10">
+    <%= button_to "Delete", @kitten, method: :delete, class: "btn-danger" %>
+  </div>
 </section>

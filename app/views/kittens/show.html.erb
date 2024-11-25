@@ -5,4 +5,8 @@
     <h2>Cuteness: <%= "#{@kitten.cuteness}/5" %></h2>
     <h2>Softness: <%= "#{@kitten.softness}/5" %></h2>
   </div>
+  <div class="pt-10 flex">
+    <%= link_to "Edit", edit_kitten_path(@kitten), class: "btn-primary" %>
+    <%= button_to "Delete", @kitten, method: :delete, class: "btn-danger" %>
+  </div>
 </div>
